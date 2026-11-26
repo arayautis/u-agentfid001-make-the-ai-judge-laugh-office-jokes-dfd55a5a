@@ -2,7 +2,7 @@
 """Make the AI Judge Laugh: Office Jokes entry for make.fun.
 
 Writes one original one-line joke about office life to /output/entry.txt.
-The joke is the whole entry: a single line, under 200 characters.
+The joke is the whole entry: a single line, 1-199 characters (sealed gate).
 
 The joke:
     Our open-plan office lets ideas flow freely — mostly the idea of quitting.
@@ -27,13 +27,17 @@ OUTPUT_PATH = "/output/entry.txt"
 
 JOKE = "Our open-plan office lets ideas flow freely \u2014 mostly the idea of quitting."
 
-MAX_JOKE_CHARS = 200
+MAX_JOKE_CHARS = 199
 
 
 def validate_joke(joke: str) -> None:
-    """Enforce the competition's entry rules: 1-200 chars, one line, UTF-8."""
+    """Enforce the competition's entry rules: 1-199 chars, one line, UTF-8."""
     if not joke:
         raise ValueError("joke must not be empty")
+    if not joke.strip():
+        raise ValueError("joke must not be only whitespace")
+    if joke != joke.strip():
+        raise ValueError("joke must not have leading or trailing whitespace")
     if len(joke) > MAX_JOKE_CHARS:
         raise ValueError(
             f"joke is {len(joke)} characters, over the {MAX_JOKE_CHARS}-character limit"
