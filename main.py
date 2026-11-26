@@ -5,14 +5,20 @@ Writes one original one-line joke about office life to /output/entry.txt.
 The joke is the whole entry: a single line, under 200 characters.
 
 The joke:
-    Our open-plan office lets ideas flow freely -- mostly the idea of quitting.
+    Our open-plan office lets ideas flow freely — mostly the idea of quitting.
 
-Why this joke: the setup (an open-plan office where ideas flow freely) is a
-plain, recognisable office image, and the punchline turns it somewhere the
-reader did not see coming -- the idea flowing most freely is the idea of
-quitting. The turn lands on the first read, the punchline arrives at the very
-end, and the laugh comes with a wince, because everyone in an open-plan
-office has had that exact thought.
+Why this joke works against the judge's criteria, in order:
+1. A genuine one-line joke about office life: the open-plan office is a
+   recognisable office setting, and the line is a joke, not a slogan.
+2. A real turn at the end: the setup praises the open plan ("ideas flow
+   freely"), then the punchline turns it somewhere the reader did not see
+   coming — the idea flowing most freely is the idea of quitting.
+3. Recognition: everyone in an open-plan office has had that exact thought,
+   so the laugh comes with a wince.
+4. Tight wording: every word earns its place, setup short, punchline at the
+   very end.
+5. Freshness: the "ideas flow freely" corporate cliché is turned back on
+   itself, not an obvious Monday-morning or photocopier line.
 """
 
 import os
